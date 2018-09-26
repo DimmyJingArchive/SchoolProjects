@@ -27,7 +27,10 @@ export default {
 	data: function() {
 		return {
 			title: '# Assessment',
-			msg: '## America is a country with great opportunities waiting to be claimed. So what do you want from America? The first step in your journey to achieve greatness is to set your goal. Thus, as a practice exercise, expresse your desired goal for your journey in America by sculpting the figure below to symbolize what you think your goal will be.',
+			msg: '## America is a country with great opportunities waiting to be claimed. ' +
+				'So what do you want from America? The first step in your journey to achieve greatness ' +
+				'is to set your goal. Thus, as an exercise, express your desired goal for your ' +
+				'journey in America by sculpting the figure below',
 			iframeStyle: {
 				height: screen.height - 160 + 'px',
 				width: screen.width - 40 + 'px',

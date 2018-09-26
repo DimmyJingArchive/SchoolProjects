@@ -13,7 +13,7 @@ export default {
 	data: function() {
 		return {
 			title: '# What, Then, is an American',
-			msg: '## There is no place on earth that remain untouched from the influence of America. As one of the strongest countries in the world, it wields incredible powers and opportunities. But behind the superfluous exaggerations by other Americans, there lies the true reason for which it has grown by. Benjamin Franklin started his career without a dime in his pocket, growing to unimaginable heights. George Washington went from a farmer to the founding father of America. Those achievements were inconceivable everywhere else in the world because of caste systems and royal families. Truth is, the only trait that matters is not the royal status, not the glaring accomplishments made by your ancestors, but your usefulness to the society.'
+			msg: '## There is no place on earth that remain untouched from the influence of America. As one of the strongest countries in the world, it wields incredible powers and opportunities. But behind the superfluous exaggerations by other Americans, there lies the true reason for which it has grown by. Benjamin Franklin started his career without a dime in his pocket, growing to unimaginable heights. George Washington went from a farmer to the founding father of America. Those achievements were inconceivable everywhere else in the world because of caste systems and royal families. Truth is, the only trait that matters is not the royal status, not the glaring accomplishments made by your ancestors, but your usefulness to society.'
 		};
 	},
 	methods: {

@@ -4,9 +4,10 @@
 		<span v-html="marked(msg)"/>
 		<iframe :style="iframeStyle" src="https://stephaneginier.com/sculptgl/"/>
 		<h2>Share Your Sculpture!</h2>
+		<span>Click files &gt; Save .obj to save the file</span><br/><br/>
 		<label for="sculptSubmit" id="sculptSubmitButton">Upload File</label>
-		<input type="file" id="sculptSubmit" style="display:none"/>
-		<h2>What Others Have Made</h2>
+		<input type="file" id="sculptSubmit" accept=".obj" style="display:none" @change="sendFile"/>
+		<h2>Sculpture Gallery</h2>
 		<div id="sculptShowcase">
 			<model-obj :src="sculptSource" backgroundAlpha="0.01"/>
 			<div id="switchBar">
@@ -26,16 +27,15 @@ export default {
 	data: function() {
 		return {
 			title: '# Assessment',
-			msg: '## America is a country with great opportunities waiting for you to claim it. So what do you want from America? The first step  in your journey to achieve greatness is to set your goal, thus, as a practice exercise, expressed your desire goal for your own journey in America by sculpting the figure below to symbolize what you think your goal will be.',
+			msg: '## America is a country with great opportunities waiting to be claimed. So what do you want from America? The first step in your journey to achieve greatness is to set your goal. Thus, as a practice exercise, expresse your desired goal for your journey in America by sculpting the figure below to symbolize what you think your goal will be.',
 			iframeStyle: {
 				height: screen.height - 160 + 'px',
 				width: screen.width - 40 + 'px',
 				position: 'relative',
 				left: '-160px'
 			},
-			sculptSource: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/127738/banana.obj',
-			sculptSources: ['https://s3-us-west-2.amazonaws.com/s.cdpn.io/127738/banana.obj',
-							'https://s3.amazonaws.com/potatosfish/Thing.obj'],
+			sculptSource: 'https://s3.amazonaws.com/potatosfish/Thing.obj',
+			sculptSources: ['https://s3.amazonaws.com/potatosfish/Thing.obj'],
 			sculptIdx: 0
 		};
 	},
@@ -57,6 +57,19 @@ export default {
 			}
 			this.sculptSource = this.sculptSources[this.sculptIdx];
 		},
+		sendFile: function(e) {
+			var reader = new FileReader();
+			var file = e.target.files[0];
+			var par = this;
+			reader.onload = function() {
+				// eslint-disable-next-line
+				console.log(reader.result);
+				par.sculptSources.push(reader.result);
+				par.sculptSource = par.sculptSources[par.sculptSources.length - 1];
+				par.sculptIdx = par.sculptSources.length - 1;
+			}
+			reader.readAsDataURL(file);
+		}
 	},
 	components: {
 		ModelObj

@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<span v-html="marked(title)"></span>
-		<span v-html="marked(msg)"></span>
+		<iframe :style="iframeStyle" src="https://stephaneginier.com/sculptgl/"/>
 	</div>
 </template>
 
@@ -13,7 +13,12 @@ export default {
 	data: function() {
 		return {
 			title: '# Assessment',
-			msg: '## Hello World'
+			iframeStyle: {
+				height: screen.height - 160 + 'px',
+				width: screen.width - 40 + 'px',
+				position: 'relative',
+				left: '-160px'
+			}
 		};
 	},
 	methods: {

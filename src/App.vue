@@ -94,7 +94,7 @@ export default {
 	text-align: center;
 	padding-top: 60px;
 	padding: 180px;
-	transition: 0.5s;
+	transition: 1s;
 }
 .home {
 	background-image: url("./assets/FlagEdited.jpg");

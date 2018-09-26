@@ -112,8 +112,8 @@ export default {
 	text-shadow: 0px 0px 8px #000000;
 }
 .conclusion {
-	background-image: url("./assets/White.png");
-	color: #2c3e50;
+	background-image: url("./assets/Black.jpg");
+	color: #e2e2e2;
 	text-shadow: 0px 0px 8px #ffffff;
 }
 .page {

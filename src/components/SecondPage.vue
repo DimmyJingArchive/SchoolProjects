@@ -38,10 +38,10 @@ export default {
 				'during office, which reduces the risk that corrupted official will abuse their power, ' +
 				'or the first amendment which secures the freedom of speech, religion, assembly, and position. ' +
 				'These are laws that retains the balance which has helped countless others in our society to succeed. ' +
-				'The most recognizable example is Barack Obama, who became the 44th president of the United State, ' +
-				'and also the first African American president; With an African American agenda, Barack Obama reinforced ' +
-				'the statement in all the preceding documents. America has held a strong, unshaken foundation ' +
-				'of equality, but it is up to you to decide how tall to construct the building.'
+				'The most recognizable example of the equality provided in America is Barack Obama, who became the 44th ' +
+				'president of the United State in 2008, and also the first African American president; With an African ' +
+				'American agenda, Barack Obama reinforced the statement in all the preceding documents. America has held ' +
+				'a strong, unshaken foundation of equality, but it is up to you to decide how tall to construct the building.'
 		};
 	},
 	methods: {
